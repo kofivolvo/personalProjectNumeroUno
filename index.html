@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formula Uno</title>
+    <link href="https://fonts.googleapis.com/css?family=Jura|Khand|Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body ng-app="bestAppEver">
+    <div class="mainContainer" ng-controller="ogCntrl">
+
+
+      <header>
+        <div class="mainHeader">
+
+          <md-content class="md-padding">
+            <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+              <md-nav-item md-nav-click="" ui-sref="home" name="page1">Home</md-nav-item>
+              <md-nav-item md-nav-click="" ui-sref="circuts" name="page2">Circuts</md-nav-item>
+              <md-nav-item md-nav-click="" ui-sref="races" name="page3">Races</md-nav-item>
+              <md-nav-item md-nav-click="" ui-sref="drivers" name="page4">Drivers</md-nav-item>
+
+
+            </md-nav-bar>
+          </md-content>
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+      <ui-view></ui-view>
+
+
+      <!--- MainContent --->
+
+      <div class="mainContent">
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+      <footer>
+
+      </footer>
+
+
+    </div>
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB409quscTcnfaGGoxy3VYTsXbs68DKiaY" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="JS/app.js"></script>
+  <script src="JS/mainService.js"></script>
+  <script src="JS/mainCntrl.js"></script>
+
+
+
+</html>

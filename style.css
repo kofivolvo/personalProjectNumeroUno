@@ -1,0 +1,56 @@
+#car-image{
+width: 100%;
+height: 56em;
+
+
+}
+
+.images{
+  list-style-type: none;
+}
+
+.aboutHeader{
+  font-family: 'Limelight', cursive;
+  color: red;
+  font-size: 50px;
+}
+
+.text{
+  font-family: 'Khand', sans-serif;
+  font-size: 19px;
+
+
+
+}
+
+.aboutContainer{
+  margin: 70px;
+
+}
+
+.aboutFlexContain{
+  padding-right: 100px;
+
+}
+#map {
+  height: 100vh;
+  width: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.circutTable {
+  margin-left: 20%;
+}
+
+.racesHeader {
+  margin-left: 10%;
+}
+
+.dateContainer {
+  margin-left: 10%;
+}
