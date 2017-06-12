@@ -11,16 +11,22 @@ angular.module('bestAppEver').service('mainSrv', function($http){
 
 this.racesList = function() {
   return $http.get('carDatatbase/races.json').then(function(response){
-    console.log(response.data)
+    //console.log(response.data)
     response = response.data.map(function(race){
+      if (race.date) {
+        date = race.date.slice(0,4)
+        console.log(date);
+      }
       return {
         name: race.name,
-        date: race.date,
+        date: date,
         url: race.url,
         year: race.year,
         raceId: race.raceId,
         round: race.round,
-        time: race.time
+        time: race.time,
+        raceId: race.raceId,
+        specDate: race.date
       }
     });
 
@@ -28,7 +34,33 @@ this.racesList = function() {
 
 
     // console.log(response)
-    return response.slice(0,17);
+    return response;
+  })
+
+}
+
+
+
+this.dateList = function() {
+  return $http.get('carDatatbase/races.json').then(function(response){
+    //console.log(response.data)
+    response = response.data.map(function(date){
+      // if(date.year){
+      //   year = date.sort(function(a,b){
+      //     return a-b
+      //   })
+      // }
+      return {
+        year: date.year,
+        date: date.date
+      }
+    });
+
+
+
+
+    console.log('dates,',response)
+    return response;
   })
 
 }

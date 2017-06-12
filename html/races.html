@@ -2,11 +2,12 @@
 
 
   <h1 class="racesHeader">Races</h1>
+
   <md-input-container class="dateContainer">
     <label>Date</label>
-    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+    <md-select ng-model="selectedItem">
       <md-optgroup label="dates">
-        <md-option ng-value="race" ng-repeat="race in races"> {{race.year}} {{race.name}}</md-option>
+        <md-option ng-value="race" ng-repeat="race in dropList"> {{race.year}} : {{race.date}}</md-option>
       </md-optgroup>
     </md-select>
   </md-input-container>
@@ -36,33 +37,7 @@
       </tr>
     </table>
 
-    <!--
-  <tbody>
 
-    <tr ng-repeat="round in races">
-      <td> {{round.round}} </td>
-    </tr>
-
-    <tr ng-repeat="name in races">
-      <td> {{name.name}} </td>
-    </tr>
-
-    <tr>
-      <td>
-        <span>Circut</span>
-        <span>time</span><br>
-      </td>
-    </tr>
-
-    <tr ng-repeat="dates in races">
-      <td>
-        {{dates.date}}
-      </td>
-    </tr>
-
-  </tbody>
-
-  </table> -->
   </div>
 
 </div>

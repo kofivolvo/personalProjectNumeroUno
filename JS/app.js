@@ -29,6 +29,22 @@ angular.module('bestAppEver', ['ui.router', 'ngMaterial', 'ngAnimate', 'ui.boots
             },
             zoom: 3
           });
+
+          // marker = new google.maps.Marker({
+          //   map: map,
+          //   draggable: true,
+          //   animation: google.maps.Animation.DROP,
+          //   position: {
+          //     lat: 43.7347,
+          //     lng: 7.42056
+          //   }
+          // })
+
+          function initMap() {
+
+          }
+
+
         }
 
       })
@@ -45,6 +61,13 @@ angular.module('bestAppEver', ['ui.router', 'ngMaterial', 'ngAnimate', 'ui.boots
             console.log(response);
             $scope.races = response;
           })
+
+          mainSrv.dateList().then(function(response){
+             console.log(response);
+             $scope.dropList = response.sort(function(a,b){
+              return a-b;
+             });
+           })
 
 
           }
