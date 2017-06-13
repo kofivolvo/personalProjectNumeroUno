@@ -65,3 +65,21 @@ html, body {
 
 
 }
+
+.quotes {
+  font-family: 'Amatic SC', serif;
+  font-size: 40px;
+}
+
+.quoters{
+  font-family: 'Crete Round', serif;
+  font-size: ;
+  color: blue;
+}
+
+.quoteHeader {
+  font-family: 'Limelight', cursive;
+  color: red;
+  font-size: 50px;
+
+}
