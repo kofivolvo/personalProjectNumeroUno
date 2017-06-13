@@ -3,36 +3,54 @@
 
   <h1 class="racesHeader">Races</h1>
 
-  <md-input-container class="dateContainer">
+  <div class="row">
+    <span class="search-input">
+
+      <strong>SEARCH</strong>
+
+
+      <input type="text" class="search" data-ng-model="table" />
+
+  </span>
+  </div>
+
+
+  <!-- <md-input-container class="dateContainer">
     <label>Date</label>
     <md-select ng-model="selectedItem">
       <md-optgroup label="dates">
-        <md-option ng-value="race" ng-repeat="race in dropList"> {{race.year}} : {{race.date}}</md-option>
+        <md-option ng-value="race" ng-repeat="dates in races"> {{}} : {{}}</md-option>
       </md-optgroup>
     </md-select>
-  </md-input-container>
+  </md-input-container> -->
 
 
   <div class="circutTable">
     <table>
+      <col width="100px">
       <col width="11%">
       <col width="21%">
       <col width="25%">
       <col width="25%">
       <thead>
         <tr>
+          <th>Race ID</th>
           <th>Round</th>
           <th>Name</th>
           <th>Time</th>
+          <th>Date</th>
           <th>Results</th>
         </tr>
       </thead>
 
       <tr data-ng-repeat="race in races | filter: table">
+        <td>{{race.raceId}}</td>
         <td height="60">{{race.round}}</td>
         <td>{{race.name}}</td>
         <td>{{race.time}}</td>
         <td>{{race.date}}</td>
+        <td><a href="{{race.url}}">Link</a></td>
+        <!-- href provides external link -->
 
       </tr>
     </table>

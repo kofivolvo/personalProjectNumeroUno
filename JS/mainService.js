@@ -13,13 +13,13 @@ this.racesList = function() {
   return $http.get('carDatatbase/races.json').then(function(response){
     //console.log(response.data)
     response = response.data.map(function(race){
-      if (race.date) {
-        date = race.date.slice(0,4)
-        console.log(date);
-      }
+      // if (race.date) {
+      //   date = race.date.slice(0,4)
+      //   //console.log(date);
+      // }
       return {
         name: race.name,
-        date: date,
+        date: race.date,
         url: race.url,
         year: race.year,
         raceId: race.raceId,
@@ -34,37 +34,40 @@ this.racesList = function() {
 
 
     // console.log(response)
-    return response;
+    return response
   })
 
 }
 
 
 
-this.dateList = function() {
-  return $http.get('carDatatbase/races.json').then(function(response){
-    //console.log(response.data)
-    response = response.data.map(function(date){
-      // if(date.year){
-      //   year = date.sort(function(a,b){
-      //     return a-b
-      //   })
-      // }
-      return {
-        year: date.year,
-        date: date.date
-      }
-    });
-
-
-
-
-    console.log('dates,',response)
-    return response;
-  })
-
-}
-
+// this.dateList = function() {
+//   return $http.get('carDatatbase/races.json').then(function(response){
+//     //console.log(response.data)
+//     response = response.data.map(function(date){
+//       // if(date.year){
+//       //   year = date.sort(function(a,b){
+//       //     return a-b
+//       //   })
+//       // }
+//       return {
+//         raceId: date.raceId,
+//         date: date.date,
+//         name: date.name,
+//         year: date.year
+//       }
+//     });
+//
+//
+//
+//
+//
+//
+//     console.log('dates,',response)
+//     return response;
+//   })
+//
+// }
 
 
 
